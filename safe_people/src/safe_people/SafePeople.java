@@ -1,3 +1,19 @@
+/*There are N people in a city.(N > 100). Out of N already N/6 people are
+effected with virus.
+
+Consider the following scenario and print in how many days the city will
+be free from virus?
+
+1. Daily 10 new people are effecting with virus at the same time, 15
+people are cured from virus.
+
+2. once a person got effected and cured then he won't effect again.
+
+you also need to print is there any one left without gets effected. i.e.
+if the virus ends without reaching the last person, then you need to
+print the number of people who are not effected from virus. otherwise
+print 0.*/
+
 package safe_people;
 
 import java.util.Scanner;
