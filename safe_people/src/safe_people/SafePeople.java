@@ -9,29 +9,31 @@ public class SafePeople {
 
 		Scanner sc= new Scanner(System.in);
 		System.out.println("Enter the population of city");
-		double n,affected,affecting,not_cured,not_affected;
+		double n,affected,remaining;
 		int days=0;
 		n = sc.nextDouble();
 		System.out.println("The total population is"+n);
 		affected=Math.ceil(n/6);
-		System.out.println("No.of affected "+affected);
-		
-		do{
+		System.out.println("No.of affected already "+affected);//
+		remaining=n-affected;
+		while(affected>0)
+		{
 			days=days+1;
-			//System.out.println("Day:"+days);
-			affected=Math.ceil(n/6);
-			//System.out.println("No.of affected "+affected);
-			not_affected=n-affected;
-			//System.out.println("No.of not_affected "+not_affected);
-			affecting=affected+10;
-			//System.out.println("No.of affecting "+affecting);
-			not_cured=affecting-15;
-			//System.out.println("No.of not_cured "+not_cured);
-			n=not_affected+not_cured;
-			//System.out.println("Remaining "+n);
-		}while(n>0 && not_cured>0) ;
+			affected=affected+10-15;
+			//affected=affected-15;
+			remaining=remaining-10;
+			
+			
+		}
 		System.out.println("No.of days "+days);
-		System.out.println("No.of remaining "+n);
+		if(n>0) {
+			System.out.println("No.of remaining is"+remaining);
+			
+		}
+		else {
+			System.out.println("no.of remaining is 0");
+		}
+		
 		
 	}
 }
